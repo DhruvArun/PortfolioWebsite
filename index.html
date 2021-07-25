@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+
+    <title> Dhruv Arun </title>
+    <meta name="description" content="About Me" />
+    <link rel="icon" href="CircleEmoji.png" />
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <style>
+        html,
+        html[data-theme="light"] {
+            --link-color: rgb(0, 112, 201);
+            --main-background-color: hsl(0, 0%, 90%);
+            --main-text-color: hsl(0, 0%, 20%);
+        }
+
+        html[data-theme="dark"] {
+            --link-color: rgb(100, 210, 255);
+            --main-background-color: hsl(0, 0%, 20%);
+            --main-text-color: hsl(0, 0%, 85%);
+        }
+
+
+        @media (prefers-color-scheme: light) {
+
+            html,
+            html[data-theme="dark"] {
+                --link-color: rgb(0, 112, 201);
+                --main-background-color: hsl(0, 0%, 20%);
+                --main-text-color: hsl(0, 0%, 90%);
+            }
+
+            html[data-theme="light"] {
+                --link-color: rgb(0, 112, 201);
+                --main-background-color: hsl(0, 0%, 90%);
+                --main-text-color: hsl(0, 0%, 20%);
+            }
+        }
+
+
+        body {
+            background-color: var(--main-background-color);
+            color: var(--main-text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            padding: 1em;
+            /* cursor: crosshair; */
+        }
+
+        .card {
+            background-color: var(--main-text-color);
+            color: var(--main-background-color);
+            border-radius: 5px;
+        }
+
+        .navbar {
+            background-color: var(--main-text-color);
+            color: var(--main-background-color);
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: var(--main-text-color);
+            color: var(--main-background-color);
+        }
+
+        #modeButton {
+            border-radius: 50%;
+            color: var(--main-text-color);
+            background-color: var(--main-background-color);
+        }
+
+        a {
+            color: var(--link-color);
+        }
+
+        article {
+            max-width: 650px;
+            margin: 2em auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2em;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        span {
+            font-size: 1.25rem;
+        }
+
+        li {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        input {
+            background-color: var(--main-background-color);
+            color: var(--main-text-color);
+        }
+
+        textarea {
+            background-color: var(--main-background-color);
+            color: var(--main-text-color);
+        }
+
+        .ball {
+            border-radius: 30px;
+            width: 15px;
+            height: 15px;
+            background: var(--main-text-color);
+            border-color: var(--main-background-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.5s;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="foo" class="ball"></div>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <img src="CircleEmoji.png" width="50">
+            <a id="modeButton" class="btn btn-secondary btn-lg btn-floating" onclick="modeSwitcher()" role="button"> <i
+                    class="bi bi-circle-half" role="img"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <!-- <img class="d-block mx-auto mb-4" src="Photo" width="150"> -->
+        <h1 class="display-5 fw-bold">Dhruv Arun</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Hi! I'm a second year Engineering Physics student at the University of British
+                Columbia, Vancouver. </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Cards -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 mb-4">
+                <div class="card" style="width: 100%; height: 100%;">
+                    <div class="card-header"
+                        style="color: var(--main-background-color); background-color: var(--main-text-color); font-size: 1.75rem; font-weight: bold; text-align: center;">
+                        Some cool Projects
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li> XS - An Autonomous Robot Car </li>
+                            <p> A robot car made using an acrylic chasis, controlled by an OpenCV lane detection
+                                algorithm written in Python which controls the motors using a RaspberryPi computer. (A
+                                detailed description coming soon!)</p>
+                            <li> This Website </li>
+                            <p> Created with HTML, CSS, and JavaScript along with the Bootstrap framework. </p>
+                            <li> Arduino Claw </li>
+                            <p> A cardbord claw made using a servo motor controlled by an Arduino UNO. Created as a
+                                group project for a university design course. <br> An E-Poster describing our design
+                                process can be found <a href="./Arduino Claw E-Poster.pdf" target="_blank">here</a>.</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Contact Info Buttons -->
+    <div class="d-flex justify-content-around">
+        <a class="btn btn-secondary btn-lg btn-floating" style="border-radius: 20%;"
+            href="https://www.linkedin.com/in/dhruvarun/" target="_blank" role="button"> <i class="bi bi-linkedin"
+                role="img"> </i> </a>
+
+        <a class="btn btn-secondary btn-lg btn-floating" style="border-radius: 20%;"
+            href="https://www.dhruv.arun@gmail.com" target="_blank" role="button"> <i class="bi bi-envelope-fill"
+                role="img"> </i> </a>
+
+        <a class="btn btn-secondary btn-lg btn-floating" style="border-radius: 20%;" href="https://github.com/DhruvArun"
+            target="_blank" role="button"> <i class="bi-github" role="img"></i> </a>
+
+        <!-- <a class="btn btn-secondary btn-lg btn-floating" style="border-radius: 20%;" href="./resume.pdf" target="_blank"
+            role="button"> <i class="bi bi-file-earmark-text-fill" role="img"></i>
+        </a> (Resume) --> 
+
+    </div>
+
+    <hr>
+
+    <!-- Contact Form -->
+    <div class="card text-center">
+        <div class="card-header"
+            style="color: var(--main-background-color); background-color: var(--main-text-color); font-size: 1.5rem; font-weight: bold;">
+            Get in Touch
+        </div>
+        <div class="card-body"
+            style="color: var(--main-background-color); background-color: var(--main-text-color); font-size: 1.10rem;">
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
+                action="https://formspree.io/f/{form_id}" method="post">
+                <fieldset id="fs-frm-inputs">
+                    <label for="full-name">Full Name</label><br>
+                    <input type="text" name="name" id="full-name" required=""><br>
+                    <label for="email-address">Email Address</label><br>
+                    <input type="email" name="_replyto" id="email-address" required=""><br>
+                    <label for="message">Message</label><br>
+                    <textarea rows="6" name="message" id="message" required=""></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"><br>
+                </fieldset>
+                <input class="btn" type="submit" value="Submit"
+                    style="background-color: var(--main-background-color); color: var(--main-text-color); font-size: 1.25rem; font-weight: bold;">
+            </form>
+        </div>
+        <div class="card-footer"
+            style="color: var(--main-background-color); background-color: var(--main-text-color); font-size: 1.25rem;">
+            If you have advice, feedback, questions or just want to chat, feel free to reach out to me!
+        </div>
+    </div>
+
+    <hr>
+
+    <footer class="container d-flex justify-content-between align-items-center">
+        <span style="font-weight: bold;">© 2021 Dhruv Arun </span>
+        <!-- Back to Top Button -->
+        <a class="btn btn-secondary btn-lg float-end" href="#" role="button" style="border-radius: 20%;">
+            <i class="bi bi-arrow-up-square-fill"></i> </a>
+    </footer>
+
+    <hr>
+
+</body>
+
+<script>
+    // Light-Dark Mode
+    let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
+    let theme = sessionStorage.getItem('theme');
+
+    if (systemInitiatedDark.matches) {
+        document.getElementById("theme-toggle").innerHTML = "Light Mode";
+    } else {
+        document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+    }
+
+    function prefersColorTest(systemInitiatedDark) {
+        if (systemInitiatedDark.matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "Light Mode";
+            sessionStorage.setItem('theme', '');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+            sessionStorage.setItem('theme', '');
+        }
+    }
+    systemInitiatedDark.addListener(prefersColorTest);
+
+
+    function modeSwitcher() {
+        let theme = sessionStorage.getItem('theme');
+        if (theme === "dark") {
+            document.documentElement.setAttribute('data-theme', 'light');
+            sessionStorage.setItem('theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+        } else if (theme === "light") {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            sessionStorage.setItem('theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "Light Mode";
+        } else if (systemInitiatedDark.matches) {
+            document.documentElement.setAttribute('data-theme', 'light');
+            sessionStorage.setItem('theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            sessionStorage.setItem('theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "Light Mode";
+        }
+    }
+
+    if (theme === "dark") {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        sessionStorage.setItem('theme', 'dark');
+        document.getElementById("theme-toggle").innerHTML = "Light Mode";
+    } else if (theme === "light") {
+        document.documentElement.setAttribute('data-theme', 'light');
+        sessionStorage.setItem('theme', 'light');
+        document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+    }
+
+</script>
+
+</html>
